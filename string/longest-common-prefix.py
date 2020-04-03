@@ -12,9 +12,8 @@ Example 2:
 Input: ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
-Note:
 
-All given inputs are in lowercase letters a-z.
+Note: All given inputs are in lowercase letters a-z.
 """
 
 class Solution(object):

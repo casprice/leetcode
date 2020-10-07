@@ -41,3 +41,24 @@ class Solution(object):
       letterList[letter] = idx
         
     return maxLen
+
+# Sliding Window method
+class Solution(object):
+  def lengthOfLongestSubstring(self, s):
+    n = len(s)
+    length, l, r = 0, 0, 0
+    charSet = {}
+    while (r < n):
+      isUnique = s[r] in charSet
+      if not isUnique:
+        charSet.append(s[r])
+        length = max(length, r-l+1)
+      while not isUnique:
+        if s[l] == s[r]:
+          isUnique = True
+        else:
+          charSet.remove(s[l])
+        l += 1
+      r += 1
+    
+    return length
